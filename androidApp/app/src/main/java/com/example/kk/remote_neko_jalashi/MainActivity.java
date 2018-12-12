@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 
         WebView webView1 = findViewById(R.id.webView1);
         webView1.getSettings().setJavaScriptEnabled(true);
-        webView1.loadUrl("http://192.168.43.13:8080/stream_simple.html"); //HTMLファイルを配置したURL
+        webView1.loadUrl("http://192.168.43.13:8080/android_output.html"); //HTMLファイルを配置したURL
     }
     /*
     @Override
