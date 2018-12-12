@@ -43,28 +43,22 @@ class Servo(object):
     def sleep(self):
         time.sleep(self.sleep_sec)
 
-    def horizon(self, pulse):
+    def rotate(self, vertical=None, horizon=None):
         """
-        横軸の位置を変更する
+        サーボを回転させる
         Parameters
         ----------
-        pulse: int
-            PCA9685に送る信号幅
+        vertical: int
+            サーボの縦軸方向の回転制御用信号
+        horizon: int
+            サーボの横軸方向の回転制御用信号
         """
-        pulse = Servo.pulse_correction(pulse)
-        self.pwm.set_pwm(HORIZON, 0, pulse)
-        self.sleep()
-        
-    def vertical(self, pulse):
-        """
-        縦軸の位置を変更する
-        Parameters
-        ----------
-        pulse: int
-            PCA9685に送る信号幅
-        """
-        pulse = Servo.pulse_correction(pulse)
-        self.pwm.set_pwm(VERTICAL, 0, pulse)
+        if vertical is not None:
+            vertical = Servo.pulse_correction(vertical)
+            self.pwm.set_pwm(VERTICAL, 0, pulse)
+        if horizon is not None:
+            horizon = Servo.pulse_correction(horizon)
+            self.pwm.set_pwm(HORIZON, 0, pulse)
         self.sleep()
 
     def test(self):

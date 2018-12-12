@@ -7,9 +7,7 @@ class Controller(object):
             self.execute(inst)
 
     def execute(self, inst):
-        if isinstance(inst, Horizon):
-            self.servo.horizon(inst.pulse)
-        elif isinstance(inst, Vertical):
-            self.servo.vertical(inst.pulse)
+        if isinstance(inst, Rotate):
+            self.servo.rotate(vertical=inst.vertical, horizon=inst.vertical)
         else:
             self.servo.to_default()

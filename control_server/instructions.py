@@ -9,19 +9,17 @@ class Instruction(object):
     各制御命令クラスはこのクラスを継承する
     """
     
-class Horizon(Instruction):
+class Rotate(Instruction):
     """
-    縦軸方向への制御を行う命令
+    回転を行う命令
     """
-    def __init__(self, pulse):
-        self.pulse = pulse
-        
-class Vertical(Instruction):
-    """
-    横軸方向への制御を行う命令
-    """
-    def __init__(self, pulse):
-        self.pulse = pulse
+    def __init__(self, vertical=None, horizon=None, deg=None):
+        self.vertical = None
+        self.horizon = None
+        if vertical is not None:
+            self.vertical = deg_to_pulse(vertical) if deg else vertical
+        if horizon is not None:
+            self.horizon = deg_to_pulse(horizon) if deg else horizon
 
 class Default(Instruction):
     """

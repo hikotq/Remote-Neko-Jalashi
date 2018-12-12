@@ -7,11 +7,11 @@ def main():
     #servo.test()
     ctrl = Controller(servo)
     prog = [\
-                Horizon(150),\
-                Horizon(600),\
+                Rotate(horizon=-90, deg=True),\
+                Rotate(horizon=90, deg=True),\
                 Default(),\
-                Vertical(150),\
-                Vertical(600),\
+                Rotate(vertical=-90, deg=True),\
+                Rotate(vertical=90, deg=True),\
                 Default()\
             ]
     ctrl.execute_prog(prog)
