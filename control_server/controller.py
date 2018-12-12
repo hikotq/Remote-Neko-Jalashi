@@ -8,6 +8,6 @@ class Controller(object):
 
     def execute(self, inst):
         if isinstance(inst, Rotate):
-            self.servo.rotate(vertical=inst.vertical, horizon=inst.vertical)
+            self.servo.rotate(vertical=inst.vertical, horizon=inst.horizon)
         else:
             self.servo.to_default()
