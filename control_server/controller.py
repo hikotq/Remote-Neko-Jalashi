@@ -1,13 +1,15 @@
+#-*-coding: utf-8-*-
+
 class Controller(object):
     def __init__(self, servo):
         self.servo = servo
         
-    def execute_prog(self, prog):
-        for inst in prog:
-            self.execute(inst)
+    def execute_commands(self, commands):
+        for cmd in commands:
+            self.execute(cmd)
 
-    def execute(self, inst):
-        if isinstance(inst, Rotate):
-            self.servo.rotate(vertical=inst.vertical, horizon=inst.horizon)
+    def execute(self, cmd):
+        if isinstance(cmd, Rotate):
+            self.servo.rotate(vertical=cmd.vertical, horizon=cmd.horizon)
         else:
             self.servo.to_default()

@@ -3,13 +3,13 @@
 def deg_to_pulse(deg):
     return (deg + 90) / 180 * 450 + 150
 
-class Instruction(object):
+class Command(object):
     """
     Controllerクラスに与える各制御命令クラスの基底クラス
     各制御命令クラスはこのクラスを継承する
     """
     
-class Rotate(Instruction):
+class Rotate(Command):
     """
     回転を行う命令
     """
@@ -21,7 +21,7 @@ class Rotate(Instruction):
         if horizon is not None:
             self.horizon = deg_to_pulse(horizon) if deg else horizon
 
-class Default(Instruction):
+class Default(Command):
     """
     横軸方向への制御を行う命令
     """
