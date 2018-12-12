@@ -1,5 +1,8 @@
 #-*-coding: utf-8-*-
 
+def deg_to_pulse(deg):
+    return (deg + 90) / 180 * 450 + 150
+
 class Instruction(object):
     """
     Controllerクラスに与える各制御命令クラスの基底クラス
