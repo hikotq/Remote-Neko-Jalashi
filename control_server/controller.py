@@ -10,6 +10,6 @@ class Controller(object):
 
     def execute(self, cmd):
         if isinstance(cmd, Rotate):
-            self.servo.rotate(vertical=cmd.vertical, horizon=cmd.horizon)
+            self.servo.rotate(vertical=cmd.vertical, horizontal=cmd.horizontal)
         else:
             self.servo.to_default()

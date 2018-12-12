@@ -7,8 +7,8 @@ def main():
     #servo.test()
     ctrl = Controller(servo)
     cmd = [\
-                Rotate(horizon=-90, deg=True),\
-                Rotate(horizon=90, deg=True),\
+                Rotate(horizontal=-90, deg=True),\
+                Rotate(horizontal=90, deg=True),\
                 Default(),\
                 Rotate(vertical=-90, deg=True),\
                 Rotate(vertical=90, deg=True),\

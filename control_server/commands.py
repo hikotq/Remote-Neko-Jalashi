@@ -13,13 +13,13 @@ class Rotate(Command):
     """
     回転を行う命令
     """
-    def __init__(self, vertical=None, horizon=None, deg=None):
+    def __init__(self, vertical=None, horizontal=None, deg=None):
         self.vertical = None
-        self.horizon = None
+        self.horizontal = None
         if vertical is not None:
             self.vertical = deg_to_pulse(vertical) if deg else vertical
-        if horizon is not None:
-            self.horizon = deg_to_pulse(horizon) if deg else horizon
+        if horizontal is not None:
+            self.horizontal = deg_to_pulse(horizontal) if deg else horizontal
 
 class Default(Command):
     """
