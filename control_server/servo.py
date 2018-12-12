@@ -4,12 +4,11 @@
 import time
 import Adafruit_PCA9685
 
-if __name__=='__main__':
-    pwm = Adafruit_PCA9685.PCA9685()
-    pwm.set_pwm_freq(60)
+SERVO_MIN = 150    # -90度
+SERVO_MAX = 600    # +90度
 
-    servo_min = 150    # -90度
-    servo_max = 600    # +90度
+HORIZON = 8
+VERTICAL = 7
 
 
     #0.5秒おきに左右90度に動く
