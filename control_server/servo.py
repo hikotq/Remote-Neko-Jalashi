@@ -9,7 +9,7 @@ logging.basicConfig(filename='servo.log', level=logging.DEBUG)
 SERVO_MIN = 150    # -90度
 SERVO_MAX = 600    # +90度
 
-horizontalTAL = 8
+HORIZONTAL = 8
 VERTICAL = 7
 
 class Servo(object):
@@ -21,7 +21,7 @@ class Servo(object):
 
     def to_default(self):
         self.pwm.set_pwm(VERTICAL, 0, 375)
-        self.pwm.set_pwm(horizontalTAL, 0, 375)
+        self.pwm.set_pwm(HORIZONTAL, 0, 375)
         self.sleep()
 
     @classmethod
@@ -54,9 +54,9 @@ class Servo(object):
             サーボの横軸方向の回転制御用信号
         """
         if vertical is not None:
-            vertical = Servo.pulse_correction(vertical)
+            pulse = Servo.pulse_correction(vertical)
             self.pwm.set_pwm(VERTICAL, 0, pulse)
         if horizontal is not None:
-            horizontal = Servo.pulse_correction(horizontal)
-            self.pwm.set_pwm(horizontal, 0, pulse)
+            pulse = Servo.pulse_correction(horizontal)
+            self.pwm.set_pwm(HORIZONTAL, 0, pulse)
         self.sleep()

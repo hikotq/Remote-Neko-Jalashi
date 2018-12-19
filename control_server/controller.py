@@ -1,4 +1,5 @@
 #-*-coding: utf-8-*-
+from commands import Rotate
 
 class Controller(object):
     def __init__(self, servo):
