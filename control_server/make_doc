@@ -1,0 +1,10 @@
+#! /bin/sh
+sphinx-apidoc -F -o ./docs ./src
+sphinx-build -a ./docs ./html
+
+for file in `find src -type f -name "*.py"`; do
+  for name in `basename "$file" .py`; do
+    pandoc "./html/${name}.html" -o "${name}.docs"
+  done
+done
+mv *.docs word

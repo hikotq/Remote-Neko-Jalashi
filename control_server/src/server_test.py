@@ -12,13 +12,14 @@ while True:
     s.listen(5)
     c, addr = s.accept()
     print('receiving')
-    print(c.recv(4096))
+    
     while True:
-        print('sending')
-        now = datetime.now().strftime("%Y/%m/%d %H:%M:%S").encode('utf-8')
+        data = c.recv(4096).split(",")
+        x = data[0]
+        y = data[1]
+        res = "Server recieved : x = " + str(x) + ", y = " + str(y)
         try:
-            print(now)
-            c.send(now)
+            print(res)
         except:
             break
         sleep(1)

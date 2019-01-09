@@ -1,0 +1,129 @@
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div id="module-servo" class="section">
+<span id="servo-module"></span>
+<h1 id="servo-module">servo module<a href="#module-servo" class="headerlink" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt> <em>class</em> <code class="descclassname">servo.</code><code class="descname">Servo</code><a href="_modules/servo.html#Servo" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="sourceCode python"><span class="bu">object</span></code></p>
+<p>サーボと通信を行うモジュール</p>
+<dl>
+<dt> <code class="descname">__dict__</code> <em>= dict_proxy({'reset': &lt;function reset&gt;, '__module__': 'servo', 'rotate': &lt;function rotate&gt;, 'pulse_correction': &lt;classmethod object&gt;, 'to_default': &lt;function to_default&gt;, 'sleep': &lt;function sleep&gt;, '__dict__': &lt;attribute '__dict__' of 'Servo' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Servo' objects&gt;, '__doc__': '\xe3\x82\xb5\xe3\x83\xbc\xe3\x83\x9c\xe3\x81\xa8\xe9\x80\x9a\xe4\xbf\xa1\xe3\x82\x92\xe8\xa1\x8c\xe3\x81\x86\xe3\x83\xa2\xe3\x82\xb8\xe3\x83\xa5\xe3\x83\xbc\xe3\x83\xab\n ', '__init__': &lt;function __init__&gt;})</em><a href="#servo.Servo.__dict__" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.__init__" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.__init__" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">__module__</code> <em>= 'servo'</em><a href="#servo.Servo.__module__" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">__weakref__</code><a href="#servo.Servo.__weakref__" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd>
+</dl>
+<dl>
+<dt> <em>classmethod</em> <code class="descname">pulse_correction</code><span class="sig-paren">(</span><em>pulse</em><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.pulse_correction" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.pulse_correction" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>pulseの値をSERVO_MINからSERVO_MAXの範囲内に補正する</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><strong>pulse</strong> (<em>int</em>) – 補正を行う信号幅の値</td>
+</tr>
+<tr class="even">
+<td>Returns:</td>
+<td>補正後の信号幅</td>
+</tr>
+<tr class="odd">
+<td>Return type:</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.reset" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.reset" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">rotate</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.rotate" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.rotate" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>サーボを回転させる</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><ul>
+<li><strong>vertical</strong> (<em>int</em>) – サーボの縦軸方向の回転制御用信号</li>
+<li><strong>horizontal</strong> (<em>int</em>) – サーボの横軸方向の回転制御用信号</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">sleep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.sleep" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.sleep" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">to_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.to_default" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.to_default" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>サーボ位置をデフォルトにする</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+<div class="sphinxsidebarwrapper">
+<h1 id="src" class="logo"><a href="index.html">src</a></h1>
+<h3 id="navigation">Navigation</h3>
+<p><span class="caption-text">Contents:</span></p>
+<ul>
+<li><a href="client.html" class="reference internal">client module</a></li>
+<li><a href="commands.html" class="reference internal">commands module</a></li>
+<li><a href="controller.html" class="reference internal">controller module</a></li>
+<li><a href="main.html" class="reference internal">main module</a></li>
+<li><a href="server.html" class="reference internal">server module</a></li>
+<li><a href="#" class="current reference internal">servo module</a></li>
+<li><a href="servo_test.html" class="reference internal">servo_test module</a></li>
+<li><a href="test.html" class="reference internal">test module</a></li>
+</ul>
+<div class="relations">
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+<li><a href="index.html">Documentation overview</a>
+<ul>
+<li>Previous: <a href="server.html" title="previous chapter">server module</a></li>
+<li>Next: <a href="servo_test.html" title="next chapter">servo_test module</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+<h3 id="quick-search">Quick search</h3>
+<div class="searchformwrapper">
+
+</div>
+</div>
+</div>
+</div>
+<div class="clearer">
+
+</div>
+</div>
+<div class="footer">
+©2018, Author. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a> | <a href="_sources/servo.rst.txt">Page source</a>
+</div>

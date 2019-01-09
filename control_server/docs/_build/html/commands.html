@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>commands module &#8212; src  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="controller module" href="controller.html" />
+    <link rel="prev" title="client module" href="client.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-commands">
+<span id="commands-module"></span><h1>commands module<a class="headerlink" href="#module-commands" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="commands.Command">
+<em class="property">class </em><code class="descclassname">commands.</code><code class="descname">Command</code><a class="reference internal" href="_modules/commands.html#Command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Controllerクラスに与える各制御命令クラスの基底クラス
+各制御命令クラスはこのクラスを継承する</p>
+<dl class="attribute">
+<dt id="commands.Command.__dict__">
+<code class="descname">__dict__</code><em class="property"> = dict_proxy({'__dict__': &lt;attribute '__dict__' of 'Command' objects&gt;, '__module__': 'commands', '__weakref__': &lt;attribute '__weakref__' of 'Command' objects&gt;, '__doc__': '\n    Controller\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x81\xab\xe4\xb8\x8e\xe3\x81\x88\xe3\x82\x8b\xe5\x90\x84\xe5\x88\xb6\xe5\xbe\xa1\xe5\x91\xbd\xe4\xbb\xa4\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x81\xae\xe5\x9f\xba\xe5\xba\x95\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\n    \xe5\x90\x84\xe5\x88\xb6\xe5\xbe\xa1\xe5\x91\xbd\xe4\xbb\xa4\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x81\xaf\xe3\x81\x93\xe3\x81\xae\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x82\x92\xe7\xb6\x99\xe6\x89\xbf\xe3\x81\x99\xe3\x82\x8b\n    '})</em><a class="headerlink" href="#commands.Command.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="commands.Command.__module__">
+<code class="descname">__module__</code><em class="property"> = 'commands'</em><a class="headerlink" href="#commands.Command.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="commands.Command.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#commands.Command.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="commands.Default">
+<em class="property">class </em><code class="descclassname">commands.</code><code class="descname">Default</code><a class="reference internal" href="_modules/commands.html#Default"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#commands.Command" title="commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">commands.Command</span></code></a></p>
+<p>横軸方向への制御を行う命令</p>
+<dl class="attribute">
+<dt id="commands.Default.__module__">
+<code class="descname">__module__</code><em class="property"> = 'commands'</em><a class="headerlink" href="#commands.Default.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="commands.Rotate">
+<em class="property">class </em><code class="descclassname">commands.</code><code class="descname">Rotate</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em>, <em>deg=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/commands.html#Rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#commands.Command" title="commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">commands.Command</span></code></a></p>
+<p>回転を行う命令</p>
+<dl class="method">
+<dt id="commands.Rotate.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em>, <em>deg=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/commands.html#Rotate.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Rotate.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="commands.Rotate.__module__">
+<code class="descname">__module__</code><em class="property"> = 'commands'</em><a class="headerlink" href="#commands.Rotate.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="commands.deg_to_pulse">
+<code class="descclassname">commands.</code><code class="descname">deg_to_pulse</code><span class="sig-paren">(</span><em>deg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/commands.html#deg_to_pulse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.deg_to_pulse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">src</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">commands module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">controller module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">server module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">servo module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo_test.html">servo_test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="client.html" title="previous chapter">client module</a></li>
+      <li>Next: <a href="controller.html" title="next chapter">controller module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Author.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/commands.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
