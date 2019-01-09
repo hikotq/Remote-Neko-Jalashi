@@ -51,10 +51,10 @@ public class AsyncHttpRequest extends AsyncTask<Uri.Builder, Void, String> {
         dis = new DataInputStream(is);
 
         while(true) {
-                int sendX = ((MainActivity.onX-MainActivity.minX)*450)/(MainActivity.MaxX-MainActivity.minX) + 150;
-                int sendY = ((MainActivity.onY-MainActivity.minY)*450)/(MainActivity.MaxY-MainActivity.minY) + 150;
+                int sendX = (290-((MainActivity.onX-MainActivity.minX)*290)/(MainActivity.MaxX-MainActivity.minX)) + 230;
+                int sendY = ((MainActivity.onY-MainActivity.minY)*200)/(MainActivity.MaxY-MainActivity.minY) + 380;
 
-                sendTouchInfo(String.valueOf(sendX)+","+String.valueOf(sendY));
+                sendTouchInfo(String.valueOf(sendX)+","+String.valueOf(sendY)+"\n");
                 Thread.sleep(1000);
 
         }
