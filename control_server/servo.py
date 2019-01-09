@@ -3,19 +3,60 @@
 
 import time
 import Adafruit_PCA9685
+import logging
+logging.basicConfig(filename='servo.log', level=logging.DEBUG)
 
-if __name__=='__main__':
-    pwm = Adafruit_PCA9685.PCA9685()
-    pwm.set_pwm_freq(60)
+SERVO_MIN = 150    # -90度
+SERVO_MAX = 600    # +90度
 
-    servo_min = 150    # -90度
-    servo_max = 600    # +90度
+HORIZONTAL = 8
+VERTICAL = 7
 
+class Servo(object):
+    def __init__(self):
+        pwm = Adafruit_PCA9685.PCA9685()
+        pwm.set_pwm_freq(60)
+        self.pwm = pwm
+        self.sleep_sec = 1.0
 
-    #0.5秒おきに左右90度に動く
-    print('Moving servo on channel 0, press Ctrl-C to quit...')
-    while True:
-        pwm.set_pwm(7, 0, servo_min)
-        time.sleep(0.5)
-        pwm.set_pwm(7, 0, servo_max)
-        time.sleep(0.5)
+    def to_default(self):
+        self.pwm.set_pwm(VERTICAL, 0, 375)
+        self.pwm.set_pwm(HORIZONTAL, 0, 375)
+        self.sleep()
+
+    @classmethod
+    def pulse_correction(cls, pulse):
+        """
+        pulseの値をSERVO_MINからSERVO_MAXの範囲内に補正する
+        Parameters
+        ----------
+        pulse: int
+            補正を行う信号幅の値
+        """
+        if pulse > SERVO_MAX:
+            return SERVO_MAX
+        elif pulse < SERVO_MIN:
+            return SERVO_MIN
+        else:
+            return pulse
+        
+    def sleep(self):
+        time.sleep(self.sleep_sec)
+
+    def rotate(self, vertical=None, horizontal=None):
+        """
+        サーボを回転させる
+        Parameters
+        ----------
+        vertical: int
+            サーボの縦軸方向の回転制御用信号
+        horizontal: int
+            サーボの横軸方向の回転制御用信号
+        """
+        if vertical is not None:
+            pulse = Servo.pulse_correction(vertical)
+            self.pwm.set_pwm(VERTICAL, 0, pulse)
+        if horizontal is not None:
+            pulse = Servo.pulse_correction(horizontal)
+            self.pwm.set_pwm(HORIZONTAL, 0, pulse)
+        self.sleep()
