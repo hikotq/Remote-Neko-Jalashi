@@ -2,49 +2,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div id="module-server" class="section">
-<span id="server-module"></span>
-<h1 id="server-module">server module<a href="#module-server" class="headerlink" title="Permalink to this headline">¶</a></h1>
-<dl>
-<dt> <em>class</em> <code class="descclassname">server.</code><code class="descname">Server</code><a href="_modules/server.html#Server" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="sourceCode python"><span class="bu">object</span></code></p>
-<dl>
-<dt> <code class="descname">__dict__</code> <em>= dict_proxy({'__module__': 'server', 'run': &lt;function run&gt;, 'to_servo': &lt;function to_servo&gt;, '__dict__': &lt;attribute '__dict__' of 'Server' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Server' objects&gt;, '__doc__': None, '__init__': &lt;function __init__&gt;})</em><a href="#server.Server.__dict__" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
-</dd>
-</dl>
-<dl>
-<dt> <code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/server.html#Server.__init__" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server.__init__" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
-</dd>
-</dl>
-<dl>
-<dt> <code class="descname">__module__</code> <em>= 'server'</em><a href="#server.Server.__module__" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
-</dd>
-</dl>
-<dl>
-<dt> <code class="descname">__weakref__</code><a href="#server.Server.__weakref__" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd>
-</dl>
-<dl>
-<dt> <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/server.html#Server.run" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server.run" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
-</dd>
-</dl>
-<dl>
-<dt> <code class="descname">to_servo</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a href="_modules/server.html#Server.to_servo" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server.to_servo" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
-</dd>
-</dl>
-</dd>
-</dl>
-<dl>
-<dt> <code class="descclassname">server.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/server.html#main" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.main" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
-</dd>
-</dl>
+<div id="server-module" class="section">
+<h1 id="server-module">server module<a href="#server-module" class="headerlink" title="Permalink to this headline">¶</a></h1>
 </div>
 </div>
 </div>

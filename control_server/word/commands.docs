@@ -55,7 +55,19 @@
 </dl>
 <dl>
 <dt> <code class="descclassname">commands.</code><code class="descname">deg_to_pulse</code><span class="sig-paren">(</span><em>deg</em><span class="sig-paren">)</span><a href="_modules/commands.html#deg_to_pulse" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#commands.deg_to_pulse" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
+<dd><p>角度表記を信号幅に変換する :param deg: サーボの角度 :type deg: int</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Returns:</td>
+<td>角度に対応する信号幅</td>
+</tr>
+<tr class="even">
+<td>Return type:</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
 </dd>
 </dl>
 </div>

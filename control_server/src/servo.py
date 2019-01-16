@@ -50,6 +50,8 @@ class Servo(object):
             return pulse
         
     def sleep(self):
+        """self.sleep_sec秒スリープする
+        """
         time.sleep(self.sleep_sec)
 
     def rotate(self, vertical=None, horizontal=None):

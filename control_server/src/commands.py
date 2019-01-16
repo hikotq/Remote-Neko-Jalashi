@@ -1,6 +1,13 @@
 #-*-coding: utf-8-*-
 
 def deg_to_pulse(deg):
+    """角度表記を信号幅に変換する
+    Args:
+        deg (int): サーボの角度
+        
+    Returns:
+        int: 角度に対応する信号幅
+    """
     return int(float(deg - 150) / 450 * 180 - 90)
 
 class Command(object):

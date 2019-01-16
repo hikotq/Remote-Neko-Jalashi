@@ -73,7 +73,7 @@
 </dl>
 <dl>
 <dt> <code class="descname">sleep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.sleep" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.sleep" class="headerlink" title="Permalink to this definition">¶</a></dt>
-<dd>
+<dd><p>self.sleep_sec秒スリープする</p>
 </dd>
 </dl>
 <dl>

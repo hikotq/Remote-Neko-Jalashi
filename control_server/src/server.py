@@ -14,11 +14,18 @@ class Server(object):
         print(self.ctrl)
 
     def to_servo(self, x, y):
+        """角度表記を信号幅に変換する
+        Args:
+            x (int): Android端末スクリーン上のx座標
+            y (int): Android端末スクリーン上のy座標
+        """
         cmd = Rotate(horizontal=x, vertical=y)
         self.ctrl.execute(cmd)
         print(cmd)
         
     def run(self):
+        """サーバを起動する
+        """
         s = socket.socket()
 
         port = 8000

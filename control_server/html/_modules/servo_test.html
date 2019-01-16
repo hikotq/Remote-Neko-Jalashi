@@ -43,31 +43,31 @@
     <span class="c1">#縦方向の動作テストコマンド</span>
     <span class="n">vertical_test_cmd</span> <span class="o">=</span> <span class="p">[</span>\
                 <span class="n">Default</span><span class="p">(),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">),</span>\
                 <span class="n">Default</span><span class="p">(),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">),</span>\
                 <span class="n">Default</span><span class="p">()</span>\
             <span class="p">]</span>
     <span class="c1">#横方向の動作テストコマンド</span>
     <span class="n">horizontal_test_cmd</span> <span class="o">=</span> <span class="p">[</span>\
                 <span class="n">Default</span><span class="p">(),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">),</span>\
                 <span class="n">Default</span><span class="p">(),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">),</span>\
                 <span class="n">Default</span><span class="p">()</span>\
             <span class="p">]</span>
     <span class="c1">#縦と横の両方向を組み合わせた動作テストコマンド</span>
     <span class="n">combine_test_cmd</span> <span class="o">=</span> <span class="p">[</span>\
                 <span class="n">Default</span><span class="p">(),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">),</span>\
                 <span class="n">Default</span><span class="p">(),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
-                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MIN</span><span class="p">),</span>\
+                <span class="n">Rotate</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="n">SERVO_MAX</span><span class="p">),</span>\
                 <span class="n">Default</span><span class="p">()</span>\
             <span class="p">]</span>
     <span class="c1">#実行</span>
