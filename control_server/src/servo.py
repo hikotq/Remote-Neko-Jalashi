@@ -20,7 +20,7 @@ class Servo(object):
         pwm = Adafruit_PCA9685.PCA9685()
         pwm.set_pwm_freq(60)
         self.pwm = pwm
-        self.sleep_sec = 0.6
+        self.sleep_sec = 0.1
 
     def reset(cls):
         Adafruit_PCA9685.software_reset()
