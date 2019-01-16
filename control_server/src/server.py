@@ -1,3 +1,4 @@
+#-*-coding: utf-8-*-
 import socket
 from commands import Rotate, Default
 from servo import Servo
