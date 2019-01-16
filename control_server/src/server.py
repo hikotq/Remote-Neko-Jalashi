@@ -42,12 +42,11 @@ class Server(object):
             queue = Queue.Queue()
             while True:
                 data = c.recv(4096)
-                print(data)
-                for d in data.split("\n"):
-                    if d:
-                        print(d)
-                        queue.put(list(map(int, d.split(","))))
-                        
+                if data:
+                    for d in data.split("\n"):
+                        if d:
+                            print(d)
+                            queue.put(list(map(int, d.split(","))))
                 try:
                     if not queue.empty():
                         x, y = queue.get()
