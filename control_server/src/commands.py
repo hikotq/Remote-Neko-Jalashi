@@ -1,7 +1,7 @@
 #-*-coding: utf-8-*-
 
 def deg_to_pulse(deg):
-    return (deg + 90) / 180 * 450 + 150
+    return int(float(deg - 150) / 450 * 180 - 90)
 
 class Command(object):
     """
