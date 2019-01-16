@@ -32,7 +32,8 @@
           <div class="body" role="main">
             
   <h1>Source code for server</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">socket</span>
+<span></span><span class="c1">#-*-coding: utf-8-*-</span>
+<span class="kn">import</span> <span class="nn">socket</span>
 <span class="kn">from</span> <span class="nn">commands</span> <span class="k">import</span> <span class="n">Rotate</span><span class="p">,</span> <span class="n">Default</span>
 <span class="kn">from</span> <span class="nn">servo</span> <span class="k">import</span> <span class="n">Servo</span>
 <span class="kn">from</span> <span class="nn">controller</span> <span class="k">import</span> <span class="n">Controller</span>
@@ -48,11 +49,18 @@
         <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ctrl</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Server.to_servo"><a class="viewcode-back" href="../server.html#server.Server.to_servo">[docs]</a>    <span class="k">def</span> <span class="nf">to_servo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;角度表記を信号幅に変換する</span>
+<span class="sd">        Args:</span>
+<span class="sd">            x (int): Android端末スクリーン上のx座標</span>
+<span class="sd">            y (int): Android端末スクリーン上のy座標</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">cmd</span> <span class="o">=</span> <span class="n">Rotate</span><span class="p">(</span><span class="n">horizontal</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">vertical</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ctrl</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></div>
         
 <div class="viewcode-block" id="Server.run"><a class="viewcode-back" href="../server.html#server.Server.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;サーバを起動する</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
 
         <span class="n">port</span> <span class="o">=</span> <span class="mi">8000</span>
