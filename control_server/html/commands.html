@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="controller module" href="controller.html" />
-    <link rel="prev" title="client module" href="client.html" />
+    <link rel="prev" title="Welcome to src’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -41,22 +41,6 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Controllerクラスに与える各制御命令クラスの基底クラス
 各制御命令クラスはこのクラスを継承する</p>
-<dl class="attribute">
-<dt id="commands.Command.__dict__">
-<code class="descname">__dict__</code><em class="property"> = dict_proxy({'__dict__': &lt;attribute '__dict__' of 'Command' objects&gt;, '__module__': 'commands', '__weakref__': &lt;attribute '__weakref__' of 'Command' objects&gt;, '__doc__': '\n    Controller\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x81\xab\xe4\xb8\x8e\xe3\x81\x88\xe3\x82\x8b\xe5\x90\x84\xe5\x88\xb6\xe5\xbe\xa1\xe5\x91\xbd\xe4\xbb\xa4\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x81\xae\xe5\x9f\xba\xe5\xba\x95\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\n    \xe5\x90\x84\xe5\x88\xb6\xe5\xbe\xa1\xe5\x91\xbd\xe4\xbb\xa4\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x81\xaf\xe3\x81\x93\xe3\x81\xae\xe3\x82\xaf\xe3\x83\xa9\xe3\x82\xb9\xe3\x82\x92\xe7\xb6\x99\xe6\x89\xbf\xe3\x81\x99\xe3\x82\x8b\n    '})</em><a class="headerlink" href="#commands.Command.__dict__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="commands.Command.__module__">
-<code class="descname">__module__</code><em class="property"> = 'commands'</em><a class="headerlink" href="#commands.Command.__module__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="commands.Command.__weakref__">
-<code class="descname">__weakref__</code><a class="headerlink" href="#commands.Command.__weakref__" title="Permalink to this definition">¶</a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -64,11 +48,6 @@
 <em class="property">class </em><code class="descclassname">commands.</code><code class="descname">Default</code><a class="reference internal" href="_modules/commands.html#Default"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Default" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#commands.Command" title="commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">commands.Command</span></code></a></p>
 <p>横軸方向への制御を行う命令</p>
-<dl class="attribute">
-<dt id="commands.Default.__module__">
-<code class="descname">__module__</code><em class="property"> = 'commands'</em><a class="headerlink" href="#commands.Default.__module__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -76,32 +55,21 @@
 <em class="property">class </em><code class="descclassname">commands.</code><code class="descname">Rotate</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em>, <em>deg=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/commands.html#Rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Rotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#commands.Command" title="commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">commands.Command</span></code></a></p>
 <p>回転を行う命令</p>
-<dl class="method">
-<dt id="commands.Rotate.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em>, <em>deg=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/commands.html#Rotate.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.Rotate.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="commands.Rotate.__module__">
-<code class="descname">__module__</code><em class="property"> = 'commands'</em><a class="headerlink" href="#commands.Rotate.__module__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="commands.deg_to_pulse">
 <code class="descclassname">commands.</code><code class="descname">deg_to_pulse</code><span class="sig-paren">(</span><em>deg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/commands.html#deg_to_pulse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#commands.deg_to_pulse" title="Permalink to this definition">¶</a></dt>
-<dd><p>角度表記を信号幅に変換する
-:param deg: サーボの角度
-:type deg: int</p>
+<dd><p>角度表記を信号幅に変換する</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">角度に対応する信号幅</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<em>int</em>) – サーボの角度</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">角度に対応する信号幅</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
 </tr>
 </tbody>
 </table>
@@ -128,21 +96,18 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">commands module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller.html">controller module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="server.html">server module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servo.html">servo module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="servo_test.html">servo_test module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="client.html" title="previous chapter">client module</a></li>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to src’s documentation!</a></li>
       <li>Next: <a href="controller.html" title="next chapter">controller module</a></li>
   </ul></li>
 </ul>

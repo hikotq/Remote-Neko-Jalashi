@@ -1,0 +1,196 @@
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div id="module-commands" class="section">
+<span id="commands-module"></span>
+<h1 id="commands-module">commands module<a href="#module-commands" class="headerlink" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt> <em>class</em> <code class="descclassname">commands.</code><code class="descname">Command</code><a href="_modules/commands.html#Command" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#commands.Command" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="sourceCode python"><span class="bu">object</span></code></p>
+<p>Controllerクラスに与える各制御命令クラスの基底クラス 各制御命令クラスはこのクラスを継承する</p>
+</dd>
+</dl>
+<dl>
+<dt> <em>class</em> <code class="descclassname">commands.</code><code class="descname">Default</code><a href="_modules/commands.html#Default" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#commands.Default" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a href="#commands.Command" class="reference internal" title="commands.Command"><code class="sourceCode python">commands.Command</code></a></p>
+<p>横軸方向への制御を行う命令</p>
+</dd>
+</dl>
+<dl>
+<dt> <em>class</em> <code class="descclassname">commands.</code><code class="descname">Rotate</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em>, <em>deg=None</em><span class="sig-paren">)</span><a href="_modules/commands.html#Rotate" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#commands.Rotate" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a href="#commands.Command" class="reference internal" title="commands.Command"><code class="sourceCode python">commands.Command</code></a></p>
+<p>回転を行う命令</p>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descclassname">commands.</code><code class="descname">deg_to_pulse</code><span class="sig-paren">(</span><em>deg</em><span class="sig-paren">)</span><a href="_modules/commands.html#deg_to_pulse" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#commands.deg_to_pulse" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>角度表記を信号幅に変換する</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><strong>deg</strong> (<em>int</em>) – サーボの角度</td>
+</tr>
+<tr class="even">
+<td>Returns:</td>
+<td>角度に対応する信号幅</td>
+</tr>
+<tr class="odd">
+<td>Return type:</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div id="module-controller" class="section">
+<span id="controller-module"></span>
+<h1 id="controller-module">controller module<a href="#module-controller" class="headerlink" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt> <em>class</em> <code class="descclassname">controller.</code><code class="descname">Controller</code><span class="sig-paren">(</span><em>servo</em><span class="sig-paren">)</span><a href="_modules/controller.html#Controller" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#controller.Controller" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="sourceCode python"><span class="bu">object</span></code></p>
+<p>サーボを操作するクラス</p>
+<dl>
+<dt> <code class="descname">execute</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a href="_modules/controller.html#Controller.execute" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#controller.Controller.execute" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>コマンドを実行する</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><strong>cmd</strong> (<a href="commands.html#commands.Command" class="reference internal" title="commands.Command"><em>Command</em></a>) – Commandクラス</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">execute_commands</code><span class="sig-paren">(</span><em>commands</em><span class="sig-paren">)</span><a href="_modules/controller.html#Controller.execute_commands" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#controller.Controller.execute_commands" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>複数コマンドを実行する :param commands: Commandのサブクラスの配列 :type commands: list[Command]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div id="module-main" class="section">
+<span id="main-module"></span>
+<h1 id="main-module">main module<a href="#module-main" class="headerlink" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt> <code class="descclassname">main.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/main.html#main" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#main.main" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div id="module-server" class="section">
+<span id="server-module"></span>
+<h1 id="server-module">server module<a href="#module-server" class="headerlink" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt> <em>class</em> <code class="descclassname">server.</code><code class="descname">Server</code><a href="_modules/server.html#Server" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="sourceCode python"><span class="bu">object</span></code></p>
+<dl>
+<dt> <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/server.html#Server.run" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server.run" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>サーバを起動する</p>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">to_servo</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a href="_modules/server.html#Server.to_servo" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.Server.to_servo" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>角度表記を信号幅に変換する</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><ul>
+<li><strong>x</strong> (<em>int</em>) – Android端末スクリーン上のx座標</li>
+<li><strong>y</strong> (<em>int</em>) – Android端末スクリーン上のy座標</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descclassname">server.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/server.html#main" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#server.main" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div id="module-servo" class="section">
+<span id="servo-module"></span>
+<h1 id="servo-module">servo module<a href="#module-servo" class="headerlink" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt> <em>class</em> <code class="descclassname">servo.</code><code class="descname">Servo</code><a href="_modules/servo.html#Servo" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="sourceCode python"><span class="bu">object</span></code></p>
+<p>サーボと通信を行うモジュール</p>
+<dl>
+<dt> <em>classmethod</em> <code class="descname">pulse_correction</code><span class="sig-paren">(</span><em>pulse</em><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.pulse_correction" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.pulse_correction" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>pulseの値をSERVO_MINからSERVO_MAXの範囲内に補正する</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><strong>pulse</strong> (<em>int</em>) – 補正を行う信号幅の値</td>
+</tr>
+<tr class="even">
+<td>Returns:</td>
+<td>補正後の信号幅</td>
+</tr>
+<tr class="odd">
+<td>Return type:</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.reset" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.reset" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">rotate</code><span class="sig-paren">(</span><em>vertical=None</em>, <em>horizontal=None</em><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.rotate" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.rotate" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>サーボを回転させる</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Parameters:</td>
+<td><ul>
+<li><strong>vertical</strong> (<em>int</em>) – サーボの縦軸方向の回転制御用信号</li>
+<li><strong>horizontal</strong> (<em>int</em>) – サーボの横軸方向の回転制御用信号</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">sleep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.sleep" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.sleep" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>self.sleep_sec秒スリープする</p>
+</dd>
+</dl>
+<dl>
+<dt> <code class="descname">to_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a href="_modules/servo.html#Servo.to_default" class="reference internal"><span class="viewcode-link">[source]</span></a><a href="#servo.Servo.to_default" class="headerlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>サーボ位置をデフォルトにする</p>
+</dd>
+</dl>
+</dd>
+</dl>

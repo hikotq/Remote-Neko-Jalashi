@@ -2,9 +2,14 @@
 sphinx-apidoc -F -o ./docs ./src
 sphinx-build -a ./docs ./html
 
+rm word/*
 for file in `find src -type f -name "*.py"`; do
   for name in `basename "$file" .py`; do
     pandoc "./html/${name}.html" -o "${name}.docs"
+    head -n -40 ${name}.docs > tmp
+    mv tmp word/${name}.docs
   done
+  rm ./*.docs
 done
-mv *.docs word
+rm word/*test*
+cat word/*.docs > word/document.docs

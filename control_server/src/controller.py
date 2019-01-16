@@ -17,6 +17,7 @@ class Controller(object):
 
     def execute(self, cmd):
         """コマンドを実行する
+        
         Args:
             cmd (Command): Commandクラス
         """

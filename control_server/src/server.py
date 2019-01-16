@@ -16,6 +16,7 @@ class Server(object):
 
     def to_servo(self, x, y):
         """角度表記を信号幅に変換する
+        
         Args:
             x (int): Android端末スクリーン上のx座標
             y (int): Android端末スクリーン上のy座標

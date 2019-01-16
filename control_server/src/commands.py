@@ -2,6 +2,7 @@
 
 def deg_to_pulse(deg):
     """角度表記を信号幅に変換する
+    
     Args:
         deg (int): サーボの角度
         

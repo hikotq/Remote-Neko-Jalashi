@@ -187,6 +187,4 @@ todo_include_todos = True
 
 autodoc_default_flags = [
         'members', 
-        'private-members', 
-        'special-members'
 ]
