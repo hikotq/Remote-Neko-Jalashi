@@ -5,7 +5,7 @@
 ハード：HUAWEI MediaPad T1 7.0
 
 <初期設定>
-１．MJPG-Streamerを導入
-２．wwwフォルダに，android_output.htmlをコピー
-３．アプリをインストール
-４．・・・・（続く）
+1. MJPG-Streamerを導入
+2. wwwフォルダに，android_output.htmlをコピー
+3. アプリをインストール
+4. ・・・・（続く）
